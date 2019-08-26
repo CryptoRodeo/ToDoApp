@@ -3,6 +3,7 @@ import {hot} from "react-hot-loader";
 import "./App.css";
 import todo_list from './Todo_object.js';
 import CreateTodo from './CreateTodo.js';
+import TodoList from "./TodoList";
 
 
 export default class App extends Component{
@@ -22,6 +23,13 @@ export default class App extends Component{
           createTask={this.createTask.bind(this)}
         />
 
+        <TodoList
+          todos={this.state.todos}
+
+          toggleTasks={this.state.toggleCompletion.bind(this)}
+          editTask={this.editTask.bind(this)}
+          deleteTask={this.deleteTask.bind(this)}
+        />
       </div>
     );
   }
