@@ -2,9 +2,10 @@ import React, { Component} from "react";
 import {hot} from "react-hot-loader";
 import "./App.css";
 import todo_list from './Todo_object.js';
+import CreateTodo from './CreateTodo.js';
 
 
-class App extends Component{
+export default class App extends Component{
   constructor(props)
   {
     super(props);
@@ -16,12 +17,16 @@ class App extends Component{
   render(){
     return(
       <div className="App">
-        <h1> Hola Mundo! </h1>
+        <h1>ToDo</h1>
+        <CreateTodo
+          createTask={this.createTask.bind(this)}
+        />
+
       </div>
     );
   }
 
-
+  //Class methods
   createTask(task)
   {
     task = task.trim() //remove white space
