@@ -74,6 +74,21 @@ export default class TodoItem extends Component
 
     toggleTask()
     {
-        this.props.toggleTask(this.props.taskID);
+        this.props.toggleTask(this.props.id);
+    }
+
+    editTask(e)
+    {
+        this.props.editTask(this.props.id, this.ref.task.value);
+
+        this.setState({
+            currentlyEditing: false
+        });
+        e.preventDefault();
+    }
+
+    deleteTask()
+    {
+        this.props.deleteTask(this.props.id);
     }
 }
