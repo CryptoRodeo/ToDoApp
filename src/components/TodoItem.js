@@ -79,7 +79,7 @@ export default class TodoItem extends Component
 
     editTask(e)
     {
-        this.props.editTask(this.props.id, this.ref.task.value);
+        this.props.editTask(this.props.id, this.refs.task.value);
 
         this.setState({
             currentlyEditing: false

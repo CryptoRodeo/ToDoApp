@@ -10,15 +10,14 @@ export default class CreateTodo extends Component
                 <button>Add Task</button>
             </form>
         );
-
-        onSubmit(e)
-        {
-            this.props.createTask(this.refs.taskDetails.value);
-
-            //Clear input
-            this.ref.taskDetails.value="";
-
-            e.preventDefault();
-        }
+    }
+    onSubmit(e)
+    {
+        //get the value from the input
+        this.props.createTask(this.refs.taskDetails.value);
+        //Clear input
+        this.refs.taskDetails.value="";
+        //Prevent page reset.
+        e.preventDefault();
     }
 }
