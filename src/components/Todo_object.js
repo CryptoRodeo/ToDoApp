@@ -2,17 +2,18 @@
  * This file contains the basic object model and functions for the todo-list.
  */
 
- const todo_list = {
-    tasks:[],
+const todo_list = {
+    tasks: [],
     loc_stor_key: "todos",
     populate()
     {
-        this.items = this.get();
+        this.tasks = this.get();
     },
     get()
     {
-        try { return JSON.parse(localStorage.getItem(this.loc_stor_key)); } //Retrieve data from local storage
+        try { return JSON.parse(localStorage.getItem(this.loc_stor_key)) || [] } //Retrieve data from local storage
         catch (e) { console.log(e); }
+        return [];
     },
     save()
     {
@@ -38,9 +39,10 @@
     {
         let todo = this.tasks[id];
         todo.task = new_task;
+        this.save();
     }
- };
-
- todo_list.populate();
+  };
+  
+  todo_list.populate();
 
  export default todo_list;
