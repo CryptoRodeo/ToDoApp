@@ -21,7 +21,7 @@ html, body
 
   #inputContainer
   {
-    width: 40rem;
+    width: 30rem;
     margin: 0 auto;
     position: relative;
   }
@@ -34,8 +34,8 @@ html, body
   input
   {
     box-sizing: border-box;
-    width: 40rem;
-    height: 3.87rem;
+    width: 30rem;
+    height: 2.87rem;
     border-radius: 1rem;
     border: solid 1px #1C2331;
     padding: 15px;
@@ -53,8 +53,8 @@ html, body
     border: none;
     background-color: #1C2331;
     border-radius: 1rem;
-    height: 3.87rem;
-    width: 3.87rem;
+    height: 2.87rem;
+    width: 2.87rem;
   }
 
   div#inputContainer button
