@@ -17,6 +17,9 @@ export default class App extends Component{
   render(){
     return(
       <div className="App">
+        <div id="img-container">
+          <img src="./img/person.png"/>
+        </div>
         <h1>Taskify</h1>
         <CreateTodo
           createTask={this.createTask.bind(this)}
