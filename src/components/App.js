@@ -16,20 +16,16 @@ export default class App extends Component{
   }
   render(){
     return(
-      <div className="App">
-        <div id="img-container">
-          <img src="./img/person.png"/>
-        </div>
-        <h1>Taskify</h1>
-        <CreateTodo
-          createTask={this.createTask.bind(this)}
-        />
-        <TodoList
-          todos={this.state.todos}
-          toggleTask={this.toggleCompletion.bind(this)}
-          editTask={this.editTask.bind(this)}
-          deleteTask={this.deleteTask.bind(this)}
-        />
+      	<div className="App">
+            <CreateTodo
+                createTask={this.createTask.bind(this)}
+            />
+            <TodoList
+                todos={this.state.todos}
+                toggleTask={this.toggleCompletion.bind(this)}
+                editTask={this.editTask.bind(this)}
+                deleteTask={this.deleteTask.bind(this)}
+            />
       </div>
     );
   }
