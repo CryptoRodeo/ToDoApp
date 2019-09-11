@@ -15,19 +15,19 @@ export default class TodoItem extends Component
         if(this.state.currentlyEditing)
         {
             return (
-                <td>
+                <div>
                     <button onClick={this.editTask.bind(this)}>Save</button>
                     <button className="cancel" onClick={this.alterEditState.bind(this,false)}>Cancel</button>
-                </td>
+                </div>
             );
         }
         else
         {
             return (
-                <td>
+                <div>
                     <button onClick={this.alterEditState.bind(this,true)}>Edit</button>
                     <button className="delete" onClick={this.deleteTask.bind(this)}>Delete</button>
-                </td>
+                </div>
             );
         }
     }
@@ -40,17 +40,21 @@ export default class TodoItem extends Component
         if(this.state.currentlyEditing)
         {
             return (
-                <td>
                     <form onSubmit={this.editTask.bind(this)}>
                         <input ref="task" defaultValue={task} autoFocus />
                     </form>
-                </td>
             );
         }
         else
         {
             return (
-                <td onClick={this.toggleTask.bind(this)} style={taskStyle}>{task}</td>
+
+                <form onSubmit={this.editTask.bind(this)}>
+                        <input ref="task" defaultValue={task} style={taskStyle} autoFocus disabled/>
+                </form>
+
+
+                // <td onClick={this.toggleTask.bind(this)} style={taskStyle}>{task}</td>
             );
         }
     }
@@ -59,10 +63,10 @@ export default class TodoItem extends Component
     {
         const {isCompleted} = this.props;
         return (
-            <tr className={"task-" + (isCompleted ? "completed":"not-completed")}>
+            <div className={"task-" + (isCompleted ? "completed":"not-completed")}>
                 {this.renderTask()}
                 {this.renderEditingSection()}
-            </tr>
+            </div>
         );
     }
 

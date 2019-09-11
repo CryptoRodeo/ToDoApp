@@ -26,11 +26,14 @@ export default class TodoList extends Component
             return <p className="no-tasks">Add your first todo!</p>;
         }
         return (
-            <table>
-                <tbody>
-                    {this.renderItems()}
-                </tbody>
-            </table>
+            // <table>
+            //     <tbody>
+            //         {this.renderItems()}
+            //     </tbody>
+            // </table>
+            <div>
+                {this.renderItems()}     
+            </div>                   
             );
     }
 }
