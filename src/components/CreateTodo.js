@@ -5,12 +5,14 @@ export default class CreateTodo extends Component
     render()
     {
         return (
-            <form id="primary-input-form" onSubmit={this.onSubmit.bind(this)} class="createTodoForm">
-                <div id="inputContainer">
-                    <input id="primary-input" type="text" placeholder="Task" ref="taskDetails" autoFocus/>
-                    <button id="primary-input-button"><i class="fa fa-plus"></i></button>
-                </div>
-            </form>
+            <nav>
+                <form id="primary-input-form" onSubmit={this.onSubmit.bind(this)} class="createTodoForm">
+                    <div id="inputContainer">
+                        <input id="primary-input" type="text" placeholder="Task" ref="taskDetails" autoFocus/>
+                        <button id="primary-input-button"><i class="fa fa-plus"></i></button>
+                    </div>
+                </form>
+            </nav>
         );
     }
     onSubmit(e)
