@@ -15,7 +15,7 @@ export default class TodoItem extends Component
         if(this.state.currentlyEditing)
         {
             return (
-                <div>
+                <div class="edit-task">
                     <button onClick={this.editTask.bind(this)}>Save</button>
                     <button className="cancel" onClick={this.alterEditState.bind(this,false)}>Cancel</button>
                 </div>
@@ -24,8 +24,9 @@ export default class TodoItem extends Component
         else
         {
             return (
-                <div>
-                    <button onClick={this.alterEditState.bind(this,true)}>Edit</button>
+                <div class="edit-task render-editing" onClick={this.alterEditState.bind(this,true)}>
+                    <i class="fa fa-ellipsis-h"></i>
+                    <button>Edit</button>
                     <button className="delete" onClick={this.deleteTask.bind(this)}>Delete</button>
                 </div>
             );

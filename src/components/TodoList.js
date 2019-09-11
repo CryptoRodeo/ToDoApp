@@ -31,7 +31,7 @@ export default class TodoList extends Component
             //         {this.renderItems()}
             //     </tbody>
             // </table>
-            <div>
+            <div id="todo-list">
                 {this.renderItems()}     
             </div>                   
             );

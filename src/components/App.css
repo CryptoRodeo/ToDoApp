@@ -105,3 +105,24 @@ section#side-nav
   background-color: #2E2E2E;
 }
    
+
+div.edit-task
+{
+  display: inline-block;
+
+}
+
+div.edit-task button
+{
+  margin: 10px 10px;
+}
+
+div.render-editing button
+{
+  display: none;
+}
+
+div#todo-list
+{
+  padding: 20px;
+}
