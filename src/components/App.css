@@ -6,11 +6,14 @@ html, body
   background-color: #fff;
   padding: 0;
   margin: 0;
+  position: relative;
+  z-index: 0;
 }
 nav
 {
   margin: 0;
-  background-color: #3E4551;
+  background-color: #100e17;
+  z-index: 0;
 }
 
 .App {
@@ -67,7 +70,7 @@ button
 
     border: none;
 	color: #fff;
-    background-color:  #CC0000;
+    background-color:  #dd8c26;
 
 }
 
@@ -90,3 +93,15 @@ div#inputContainer button
     padding: 0;
     display: inline-block;
   }
+section#side-nav
+{
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 200px;
+  height: 100vh;
+  background-color: #2E2E2E;
+}
+   

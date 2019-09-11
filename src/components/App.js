@@ -17,6 +17,9 @@ export default class App extends Component{
   render(){
     return(
       	<div className="App">
+          <section id="side-nav">
+            
+          </section>
             <CreateTodo
                 createTask={this.createTask.bind(this)}
             />
