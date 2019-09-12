@@ -3,7 +3,7 @@ html, body
   font-family: 'Helvetica', serif;
   color: #37474F;
   font-size: 18px;
-  background-color: #fff;
+  background-color: #f7f7f7;
   padding: 0;
   margin: 0;
   position: relative;
@@ -12,7 +12,7 @@ html, body
 nav
 {
   margin: 0;
-  background-color: #100e17;
+  background-color: #e44232;
   z-index: 0;
 }
 
