@@ -20,14 +20,15 @@ export default class App extends Component{
           <section id="side-nav">
             
           </section>
-            <CreateTodo
-                createTask={this.createTask.bind(this)}
-            />
             <TodoList
                 todos={this.state.todos}
                 toggleTask={this.toggleCompletion.bind(this)}
                 editTask={this.editTask.bind(this)}
                 deleteTask={this.deleteTask.bind(this)}
+            />
+
+			<CreateTodo
+            	createTask={this.createTask.bind(this)}
             />
       </div>
     );
