@@ -1,0 +1,15 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Tasks
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Fix up UI container elements so they dont overlap.
+
+- Fix buttons on editing container so they're left align
+
+- Add icons to the nav bar
+
+- Add a 'quick add' form to the nav bar.
+
+- Add a settings page
+
+- Hook up to a firebase db 
