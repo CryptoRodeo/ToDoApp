@@ -41,7 +41,7 @@ export default class TodoItem extends Component
         if(this.state.currentlyEditing)
         {
             return (
-                    <form onSubmit={this.editTask.bind(this)}>
+                    <form  class="todo-item-active" onSubmit={this.editTask.bind(this)}>
                         <input ref="task" defaultValue={task} autoFocus />
                     </form>
             );
@@ -50,7 +50,7 @@ export default class TodoItem extends Component
         {
             return (
 
-                <form onSubmit={this.editTask.bind(this)}>
+                <form class="todo-item" onSubmit={this.editTask.bind(this)}>
                         <input ref="task" defaultValue={task} style={taskStyle} autoFocus disabled/>
                 </form>
 

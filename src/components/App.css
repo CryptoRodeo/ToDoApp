@@ -38,6 +38,11 @@ nav
     margin: 0 auto;
     position: relative;
   }
+
+  #inputContainer input
+  {
+	border: solid 1px #f1f1f1;
+  }
   .no-tasks
   {
     font-size: 1.2rem;
@@ -127,3 +132,32 @@ div#todo-list
 {
   padding: 20px;
 }
+
+form.todo-item
+{
+	display: inline-block;
+}
+
+form.todo-item-active
+{
+	
+}
+
+input
+{
+	line-height: 21px;
+	padding: 8px 8px 8px 0;
+	width: 522px;
+	height: 37px;
+	font-size: 18px;
+	border: none;
+	border-bottom: solid 1px #f1f1f1;
+}
+
+input:disabled
+{
+	background-color: #fff;
+}
+
+	
+
