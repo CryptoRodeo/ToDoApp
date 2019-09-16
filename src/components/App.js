@@ -17,6 +17,7 @@ export default class App extends Component{
   render(){
     return(
       	<div className="App">
+			<nav></nav>
           <section id="side-nav">
             
           </section>

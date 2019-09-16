@@ -10,7 +10,7 @@ export default class TodoItem extends Component
         };
     }
 
-    renderEditingSection()
+   renderEditingSection()
     {
         if(this.state.currentlyEditing)
         {
@@ -26,12 +26,12 @@ export default class TodoItem extends Component
             return (
                 <div class="edit-task render-editing" onClick={this.alterEditState.bind(this,true)}>
                     <i class="fa fa-ellipsis-h"></i>
+					<i class="fa fa-trash" onClick={this.deleteTask.bind(this)}></i>
                     <button>Edit</button>
-                    <button className="delete" onClick={this.deleteTask.bind(this)}>Delete</button>
                 </div>
             );
         }
-    }
+    } 
 
     renderTask()
     {
