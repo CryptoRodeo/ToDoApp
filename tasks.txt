@@ -2,8 +2,6 @@
 Tasks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Fix error when task are deleted (the editing box opens up)
-
 - Fix up UI container elements so they dont overlap.
 
 - Fix buttons on editing container so they're left align
