@@ -15,7 +15,7 @@ export default class TodoItem extends Component
         if(this.state.currentlyEditing)
         {
             return (
-                <div class="edit-task">
+                <div className="edit-task">
                     <button onClick={this.editTask.bind(this)}>Save</button>
                     <button className="cancel" onClick={this.alterEditState.bind(this,false)}>Cancel</button>
                 </div>
@@ -24,9 +24,9 @@ export default class TodoItem extends Component
         else
         {
             return (
-                <div class="edit-task render-editing" onClick={this.alterEditState.bind(this,true)}>
-                    <i class="fa fa-ellipsis-h"></i>
-					<i class="fa fa-trash" onClick={this.deleteTask.bind(this)}></i>
+                <div className="edit-task render-editing" onClick={this.alterEditState.bind(this,true)}>
+                    <i className="fa fa-ellipsis-h"></i>
+					<i className="fa fa-trash" onClick={this.deleteTask.bind(this)}></i>
                     <button>Edit</button>
                 </div>
             );
@@ -41,7 +41,7 @@ export default class TodoItem extends Component
         if(this.state.currentlyEditing)
         {
             return (
-                    <form  class="todo-item-active" onSubmit={this.editTask.bind(this)}>
+                    <form  className="todo-item-active" onSubmit={this.editTask.bind(this)}>
                         <input ref="task" defaultValue={task} autoFocus />
                     </form>
             );
@@ -50,7 +50,7 @@ export default class TodoItem extends Component
         {
             return (
 
-                <form class="todo-item" onSubmit={this.editTask.bind(this)}>
+                <form className="todo-item" onSubmit={this.editTask.bind(this)}>
                         <input ref="task" defaultValue={task} style={taskStyle} autoFocus disabled/>
                 </form>
 
