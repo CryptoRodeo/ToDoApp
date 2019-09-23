@@ -16,12 +16,10 @@ export default class App extends Component{
   }
   render(){
     return(
-      	<div className="App">
-			<nav></nav>
-          <section id="side-nav">
-            
-          </section>
-            <TodoList
+   	<div className="App">
+		<div id="appContainer">
+           
+			<TodoList
                 todos={this.state.todos}
                 toggleTask={this.toggleCompletion.bind(this)}
                 editTask={this.editTask.bind(this)}
@@ -31,6 +29,7 @@ export default class App extends Component{
 			<CreateTodo
             	createTask={this.createTask.bind(this)}
             />
+		</div>
       </div>
     );
   }
